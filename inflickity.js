@@ -300,6 +300,11 @@ Inflickity.prototype.releaseTick = function() {
 
 };
 
+Inflickity.prototype.scrollToIndex = function( index ) {
+  var target = this.content.getElementsByTagName('li')[index];
+  target && this.scrollTo( -target.offsetLeft );
+  return target;
+}
 
 Inflickity.prototype.scrollTo = function( dest, duration ) {
   var cw = this.contentWidth;
