@@ -301,7 +301,7 @@ Inflickity.prototype.releaseTick = function() {
 };
 
 Inflickity.prototype.scrollToIndex = function( index ) {
-  var target = this.content.getElementsByTagName('li')[index];
+  var target = this.content.children[index];
   target && this.scrollTo( -target.offsetLeft );
   return target;
 }
